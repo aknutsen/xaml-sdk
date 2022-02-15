@@ -14,14 +14,14 @@ namespace BindingToICustomTypeDescriptor
             {
                 if (this.data == null)
                 {
-                    this.data = this.GenerateData();
+                    this.data = new ObservableCollection<MyDataRow>();
                 }
 
                 return this.data;
             }
         }
 
-        private ObservableCollection<MyDataRow> GenerateData()
+        public ObservableCollection<MyDataRow> GenerateData()
         {
             ObservableCollection<MyDataRow> items = new ObservableCollection<MyDataRow>();
 

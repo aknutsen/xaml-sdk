@@ -7,10 +7,11 @@
     <Window.Resources>
         <local:MyViewModel x:Key="MyViewModel"/>
     </Window.Resources>
-    <Grid DataContext="{StaticResource MyViewModel}">
+    <StackPanel x:Name="panel" DataContext="{StaticResource MyViewModel}">
+        <Button Click="Addy">Add row</Button>
         <telerik:RadGridView ItemsSource="{Binding Data}" 
                              GroupRenderMode="Flat"
                              Margin="5" >
         </telerik:RadGridView>
-    </Grid>
+    </StackPanel>
 </Window>
